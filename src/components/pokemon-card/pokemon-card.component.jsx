@@ -1,7 +1,8 @@
-import './pokemon-card.styles.css';
+import './pokemon-card.styles.scss';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-const PokemonCard = ({pokemon}) => {
+const PokemonCard = ({pokemon, onClick}) => {
     const { name, url } = pokemon
     const [pokemonIndex, setPokemonIndex] = useState('');
 
@@ -14,10 +15,14 @@ const PokemonCard = ({pokemon}) => {
     },[url]) 
 
     return(
-        <div className="pokemonCard">
-            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonIndex}.png`} alt="pokemon" />
+        <Link style={{textDecoration: "none"}}  to={`/${name}`}>
+        <div className="pokemonCard" onClick={onClick}>
+            {pokemonIndex &&
+                <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonIndex}.png`} alt="pokemon" />
+            }
             <h2>{name}</h2>
         </div>
+        </Link>
     )
 }
 

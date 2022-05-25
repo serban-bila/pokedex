@@ -1,18 +1,17 @@
-
 import './App.css';
 import { Route, Routes} from "react-router-dom";
 import Home from './routes/home/home.component';
 import Navigation from './routes/navigation/navigation.component';
 
-function App({pokemon}) {
-
+function App() {
   return (
-    <Routes>
-      <Route path='/' element={<Navigation/>}>
-        <Route exact index element={<Home />} />
-        {/* <Route path="/*" element={<PokemonDetails/>} /> */}
-      </Route>
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Navigation />}>
+          <Route index element={<Home />} />
+          <Route path="/:pokemon" element={<Home />} />
+          {/* <Route path="/:pokemon" element={<PokemonDetails/>} /> */}
+        </Route>
+      </Routes>
   );
 };
 

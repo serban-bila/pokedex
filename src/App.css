@@ -6,32 +6,51 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(
-    to left,
-    rgb(61, 4, 4) 0%,
-    rgb(170, 14, 14) 100%
-  );
+  background-color: #21386E;
   text-align: center;
 }
 
 h1 {
-  color:rgb(206, 195, 44);
-  margin: 50px 0;
+  color:#FFCB05;
+  margin: 5% 0;
   font-size: 5em;
-  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Exo 2', sans-serif;
+  text-align: center;
 }
 
 input {
-  background-color: beige;
+  background-color: rgba(255, 255, 255, 0.377);
   border-radius: 10px;
 }
 
 .searchBox {
   -webkit-appearance: none;
-  border: none;
   outline: none;
   padding: 10px;
-  width: 150px;
-  line-height: 30px;
-  margin-bottom: 30px;   
+  width: 100px;
+  line-height: 20px;
+  margin-bottom: 20px;   
+  border: 3px solid #0a1736;
+}
+
+::placeholder {
+  color: black;
+}
+
+@media  screen and (min-width: 768px) {
+  h1 {
+    margin: 50px 0;
+    font-size: 7em;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  .searchBox {
+    -webkit-appearance: none;
+    outline: none;
+    padding: 10px;
+    width: 150px;
+    line-height: 30px;
+    margin-bottom: 30px;   
+    border: 3px solid #0a1736;
+  }
 }

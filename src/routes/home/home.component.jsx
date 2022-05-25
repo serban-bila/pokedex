@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 import Pokemons from '../../components/pokemon/pokemons.component'
+import PokemonDetails from '../pokemon-details/pokemon-details.component';
+import { useParams } from 'react-router-dom';
+import './home.styles.scss';
 
 
 const Home = () => {
@@ -7,14 +10,14 @@ const Home = () => {
     const [pokemons, setPokemons] = useState([]);
     const [searchField, setSearchField] = useState('');
     const [filteredPokemon, setFilteredPokemon] = useState(pokemons);
+    const {pokemon} = useParams();
   
-    console.log(filteredPokemon);
-  
+
     useEffect(() => {
       const fetchData = async() => {
         const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0');
-        const users = await response.json();
-        setPokemons(users.results);
+        const poke = await response.json();
+        setPokemons(poke.results);
       }
       fetchData();
     },[])
@@ -34,9 +37,11 @@ const Home = () => {
     }
 
     return (
-        <div>
+        <div className='container'>
             <input className='searchBox' placeholder='search pokemon' onChange={handleSearch}/>
              <Pokemons pokemons={filteredPokemon}/>
+             {pokemon &&
+             <PokemonDetails />}
         </div>
     );
 };

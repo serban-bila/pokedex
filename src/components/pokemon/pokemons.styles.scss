@@ -1,0 +1,15 @@
+.pokemonList {
+    width: 85vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5em;
+  }
+
+@media screen and (min-width: 768px){
+
+  .pokemonList {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2em;
+  }
+}

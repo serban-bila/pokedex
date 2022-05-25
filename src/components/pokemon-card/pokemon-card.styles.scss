@@ -1,0 +1,30 @@
+.pokemonCard {
+    display: flex;
+    flex-direction: column;
+    background-color: #3565AE;
+    border: 6px solid #0a1736;
+    border-radius: 2em;
+    box-shadow: inset 5px 7px #00000025;
+    padding: 1em;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+}
+
+h2 {
+    font-family: 'Koulen', cursive;
+    color:rgb(180, 180, 180)
+}
+
+@media  screen and (min-width: 768px) {
+
+    .pokemonCard {
+        padding: 2em;
+        cursor: pointer;
+        transform: translatez(0);
+        transition: transform 0.25s ease-out;
+    }
+
+    .pokemonCard:hover {
+        transform: scale(1.05);
+    }
+}
