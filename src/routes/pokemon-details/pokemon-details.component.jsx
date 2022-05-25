@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-// import { useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
 import './pokemon-details.styles.scss'
 import { Link } from "react-router-dom";
 
 
 const PokemonDetails = () => {
-    // const currentPokemon = useSelector((state) => state.pokemon.name);
     const [ pokemonDetails, setPokemonDetails ] = useState({});
     const [ pokemonImage, setPokemonImage ] = useState('');
     const {pokemon} = useParams();

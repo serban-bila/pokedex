@@ -10,6 +10,12 @@
     backface-visibility: hidden;
 }
 
+img {
+    width: 130px;
+    height:auto;
+    object-fit: cover;
+}
+
 h2 {
     font-family: 'Koulen', cursive;
     color:rgb(180, 180, 180)
