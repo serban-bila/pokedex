@@ -8,12 +8,15 @@
     padding: 1em;
     -moz-osx-font-smoothing: grayscale;
     backface-visibility: hidden;
+    // max-width: 10em;
 }
 
 img {
     width: 130px;
     height: auto;
     object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 h2 {
@@ -21,13 +24,14 @@ h2 {
     color:rgb(180, 180, 180)
 }
 
-@media  screen and (min-width: 768px) {
+@media  screen and (min-width: 768px) and (max-width: 1250px){
 
     .pokemonCard {
         padding: 2em;
         cursor: pointer;
         transform: translatez(0);
         transition: transform 0.25s ease-out;
+        // width: 11em;
     }
 
     .pokemonCard:hover {
